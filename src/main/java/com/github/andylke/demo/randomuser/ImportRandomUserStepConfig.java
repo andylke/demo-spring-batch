@@ -22,7 +22,7 @@ public class ImportRandomUserStepConfig {
 
   @Autowired private UserRepository userRepository;
 
-  @Autowired private DownloadImportRandomUserProperties properties;
+  @Autowired private DownloadRandomUserProperties properties;
 
   @Bean
   public Step importRandomUserStep() {

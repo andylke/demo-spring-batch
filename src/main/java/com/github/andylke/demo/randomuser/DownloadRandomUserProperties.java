@@ -2,14 +2,14 @@ package com.github.andylke.demo.randomuser;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "download-import-random-user")
-public class DownloadImportRandomUserProperties {
+@ConfigurationProperties(prefix = "download-random-user")
+public class DownloadRandomUserProperties {
 
-  private int pageSize = 20;
+  private int pageSize = 2000;
 
-  private int totalPage = 5;
+  private int totalPage = 10;
 
-  private int chunkSize = 20;
+  private int chunkSize = 2000;
 
   public int getPageSize() {
     return pageSize;

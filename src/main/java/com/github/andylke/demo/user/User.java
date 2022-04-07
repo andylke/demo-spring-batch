@@ -1,5 +1,6 @@
 package com.github.andylke.demo.user;
 
+import java.util.Date;
 import java.util.UUID;
 
 import javax.persistence.Entity;
@@ -21,6 +22,16 @@ public class User {
   private String name;
 
   private String email;
+
+  private String address;
+
+  private int age;
+
+  private Date dob;
+
+  private String phone;
+
+  private String cell;
 
   private String nationality;
 
@@ -64,6 +75,46 @@ public class User {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  public int getAge() {
+    return age;
+  }
+
+  public void setAge(int age) {
+    this.age = age;
+  }
+
+  public Date getDob() {
+    return dob;
+  }
+
+  public void setDob(Date dob) {
+    this.dob = dob;
+  }
+
+  public String getPhone() {
+    return phone;
+  }
+
+  public void setPhone(String phone) {
+    this.phone = phone;
+  }
+
+  public String getCell() {
+    return cell;
+  }
+
+  public void setCell(String cell) {
+    this.cell = cell;
   }
 
   public String getNationality() {

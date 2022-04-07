@@ -11,23 +11,20 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 @Configuration
-@EnableConfigurationProperties({DownloadImportRandomUserProperties.class})
-@Import({DownloadRandomUserStepConfig.class, ImportRandomUserStepConfig.class})
-public class DownloadImportRandomUserJobConfig {
+@EnableConfigurationProperties({ImportRandomUserProperties.class})
+@Import({ImportRandomUserStepConfig.class})
+public class ImportRandomUserJobConfig {
 
   @Autowired private JobBuilderFactory jobBuilderFactory;
-
-  @Autowired private Step downloadRandomUserStep;
 
   @Autowired private Step importRandomUserStep;
 
   @Bean
-  public Job downloadImportRandomUserJob() {
+  public Job importRandomUserJob() {
     return jobBuilderFactory
-        .get("downloadImportRandomUser")
+        .get("importRandomUser")
         .incrementer(new RunIdIncrementer())
-        .start(downloadRandomUserStep)
-        .next(importRandomUserStep)
+        .start(importRandomUserStep)
         .build();
   }
 }

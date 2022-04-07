@@ -35,7 +35,7 @@ public class DownloadRandomUserStepConfig {
 
   @Autowired private StepBuilderFactory stepBuilderFactory;
 
-  @Autowired private DownloadImportRandomUserProperties properties;
+  @Autowired private DownloadRandomUserProperties properties;
 
   @Bean
   public Step downloadRandomUserStep() {
